@@ -1,0 +1,27 @@
+package lake.pool.querydsl.sample;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Getter @Setter
+@NoArgsConstructor
+@ToString(of = {"id", "foodTypeName", "foodOrder"})
+public class FoodType {
+
+    @Id @GeneratedValue
+    @Column(name = "food_type_id")
+    private Integer id;
+
+    private String foodTypeName;
+    private int foodOrder;
+
+    @OneToMany(mappedBy = "foodType")
+    List<FoodStore> foodStoreList = new ArrayList<>();
+}
