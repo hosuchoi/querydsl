@@ -1,4 +1,4 @@
-package lake.pool.querydsl.sample.controller;
+package lake.pool.querydsl.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

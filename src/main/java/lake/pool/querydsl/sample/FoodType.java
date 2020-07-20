@@ -24,4 +24,9 @@ public class FoodType {
 
     @OneToMany(mappedBy = "foodType")
     List<FoodStore> foodStoreList = new ArrayList<>();
+
+    public FoodType(String foodTypeName, int foodOrder){
+        this.foodTypeName = foodTypeName;
+        this.foodOrder = foodOrder;
+    }
 }

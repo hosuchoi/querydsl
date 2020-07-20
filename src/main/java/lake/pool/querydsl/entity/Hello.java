@@ -1,4 +1,4 @@
-package lake.pool.querydsl.sample.entity;
+package lake.pool.querydsl.entity;
 
 import lombok.Getter;
 import lombok.Setter;

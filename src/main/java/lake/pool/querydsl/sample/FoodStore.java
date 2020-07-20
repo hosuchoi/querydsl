@@ -23,4 +23,16 @@ public class FoodStore {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "food_type_id")
     private FoodType foodType;
+
+    public FoodStore(String storeName, int rate, String ownerName, FoodType foodType) {
+        this.storeName = storeName;
+        this.rate = rate;
+        this.ownerName = ownerName;
+        changFoodType(foodType);
+    }
+
+    private void changFoodType(FoodType foodType) {
+        this.foodType = foodType;
+        getFoodType().getFoodStoreList().add(this);
+    }
 }

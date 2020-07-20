@@ -1,8 +1,8 @@
 package lake.pool.querydsl;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
-import lake.pool.querydsl.sample.entity.Hello;
-import lake.pool.querydsl.sample.entity.QHello;
+import lake.pool.querydsl.entity.Hello;
+import lake.pool.querydsl.entity.QHello;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
